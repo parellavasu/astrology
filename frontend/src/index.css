@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #F8FAFC;
+  background-image: 
+    radial-gradient(circle at 12% 8%, rgba(234, 88, 12, 0.04) 0%, transparent 45%),
+    radial-gradient(circle at 88% 18%, rgba(2, 132, 199, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 50% 90%, rgba(245, 158, 11, 0.03) 0%, transparent 55%);
+  background-attachment: fixed;
+  color: #0F172A;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+  border: 2px solid #F1F5F9;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Surya & Vedic gradient text utilities (Sacred Saffron & Royal Indigo) */
+.vedic-gradient-text,
+.gold-gradient-text {
+  background: linear-gradient(135deg, #EA580C 0%, #D97706 55%, #9A3412 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.indigo-gradient-text {
+  background: linear-gradient(135deg, #1E3A8A 0%, #0369A1 60%, #0284C7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Vedic Card: Crisp white card with subtle slate border and gentle shadow */
+.vedic-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.03);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vedic-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
+  transform: translateY(-1px);
+}
+
+.vedic-card-saffron {
+  background: #FFFFFF;
+  border: 1px solid #FED7AA;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(234, 88, 12, 0.05);
+  transition: all 0.22s ease;
+}
+
+.vedic-card-saffron:hover {
+  border-color: #FB923C;
+  box-shadow: 0 10px 25px -5px rgba(234, 88, 12, 0.12);
+  transform: translateY(-1px);
+}
+
+/* Primary Action Button: Auspicious Sacred Saffron (Kesariya) */
+.vedic-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  background: linear-gradient(135deg, #EA580C 0%, #C2410C 100%);
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.25);
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.vedic-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.38);
+  background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+}
+
+.vedic-btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary Button: Clean white with slate border, saffron hover */
+.vedic-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #1E293B;
+  border: 1px solid #CBD5E1;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.vedic-btn-secondary:hover {
+  background: #FFF7ED;
+  border-color: #F97316;
+  color: #C2410C;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.12);
+}
+
+.vedic-btn-indigo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  background: linear-gradient(135deg, #1E3A8A 0%, #0369A1 100%);
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(30, 58, 138, 0.25);
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.vedic-btn-indigo:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.35);
+  background: linear-gradient(135deg, #2563EB 0%, #0284C7 100%);
+}
+
+/* Print styling for Kundli reports */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+  header, footer, .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .vedic-card,
+  .vedic-card-saffron {
+    background: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+    box-shadow: none !important;
+    color: #111827 !important;
+  }
+  .vedic-gradient-text,
+  .gold-gradient-text,
+  .indigo-gradient-text {
+    color: #c2410c !important;
+    -webkit-text-fill-color: initial !important;
+  }
+}

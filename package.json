@@ -1,0 +1,30 @@
+{
+  "name": "jyotirveda-platform",
+  "version": "1.0.0",
+  "description": "JyotirVeda - Complete Modern Vedic Astrology Web Platform",
+  "main": "backend/server.js",
+  "scripts": {
+    "backend": "npm --prefix backend start",
+    "backend:dev": "npm --prefix backend run dev",
+    "frontend": "npm --prefix frontend run dev",
+    "frontend:build": "npm --prefix frontend run build",
+    "seed": "npm --prefix backend run seed",
+    "start": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "keywords": [
+    "vedic-astrology",
+    "kundli",
+    "horoscope",
+    "panchang",
+    "muhurat",
+    "astrology",
+    "react",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "JyotirVeda",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
